@@ -1,6 +1,15 @@
-import ReactDOM from "react-dom";
-import React from "react";
+import { createRoot } from "react-dom/client";
+import { BookItem } from './components/BookItem';
+
 const App = () => {
- return <h1>This is my Base</h1>;
- }
-ReactDOM.render(<App />, document.getElementById("root"));
+ return (
+    <div>
+      <h1>This is my Base</h1>
+      <BookItem />
+    </div>
+  )
+};
+
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+root.render(<App />);

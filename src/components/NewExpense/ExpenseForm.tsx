@@ -1,25 +1,30 @@
-import { useState } from 'react';
+import React, { ChangeEventHandler, FormEventHandler, useState } from 'react';
 import './ExpenseForm.css';
+import { Expense } from '../../index';
 
-export const ExpenseForm = ({ onSaveExpenseData }) => {
+type Props = {
+  onSaveExpenseData: (expense: Partial<Expense>) => void;
+}
+
+export const ExpenseForm: React.FC<Props> = ({ onSaveExpenseData }) => {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
 
-  const titleChangeHandler = (event) => {
+  const titleChangeHandler: ChangeEventHandler<HTMLInputElement> = (event) => {
     setEnteredTitle(event.target.value)
   };
-  const amountChangeHandler = (event) => {
+  const amountChangeHandler: ChangeEventHandler<HTMLInputElement> = (event) => {
     setEnteredAmount(event.target.value)
   };
-  const dateChangeHandler = (event) => {
+  const dateChangeHandler: ChangeEventHandler<HTMLInputElement> = (event) => {
     setEnteredDate(event.target.value)
   };
 
-  const submitHandler = (event) => {
+  const submitHandler: FormEventHandler = (event) => {
     event.preventDefault();
 
-    const expenseData = {
+    const expenseData: Partial<Expense> = {
       title: enteredTitle,
       amount: enteredAmount,
       date: new Date(enteredDate)

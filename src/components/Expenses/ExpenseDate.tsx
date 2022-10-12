@@ -1,7 +1,8 @@
+import React from 'react';
 import { Card } from '../UI/Card';
 import './ExpenseDate.css';
 
-export const ExpenseDate = ({ date }) => {
+export const ExpenseDate: React.FC<{date: Date}> = ({ date }) => {
   const day = date.toLocaleString('en-US', { day: '2-digit' });
   const month = date.toLocaleString('en-US', { month: 'long' });
   const year = date.getFullYear();

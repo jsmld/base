@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { ChangeEventHandler } from 'react';
 import './ExpenseFilter.css';
 
-export const ExpensesFilter = ({ year, onSelect }) => {
+type Props = {
+  year: string;
+  onSelect: (year: string) => void;
+}
 
-  const handleSelect = (e) => {
+export const ExpensesFilter: React.FC<Props> = ({ year, onSelect }) => {
+
+  const handleSelect: ChangeEventHandler<HTMLSelectElement> = (e) => {
     onSelect(e.target.value)
   }
 

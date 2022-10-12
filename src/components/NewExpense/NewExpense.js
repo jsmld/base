@@ -1,5 +1,5 @@
 import { ExpenseForm } from './ExpenseForm';
-import './style.css';
+import './NewExpense.css';
 
 export const NewExpense = ({ onAddExpense }) => {
   const saveExpenseData = (enteredExpenseData) => {

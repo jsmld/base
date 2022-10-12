@@ -1,4 +1,4 @@
-import './style.css'
+import './Expenses.css'
 import { useState } from 'react';
 import { ExpenseItem } from './ExpenseItem'
 import { Card } from '../UI/Card'

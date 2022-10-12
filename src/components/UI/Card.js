@@ -1,4 +1,4 @@
-import './style.css';
+import './Card.css';
 
 export const Card = ({ children, className }) => {
   const classes = 'card ' + className;

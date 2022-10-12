@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './style.css';
+import './ExpenseForm.css';
 
 export const ExpenseForm = ({ onSaveExpenseData }) => {
   const [enteredTitle, setEnteredTitle] = useState('');

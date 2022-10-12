@@ -1,5 +1,5 @@
-import { Card } from '../../UI/Card';
-import './style.css';
+import { Card } from '../UI/Card';
+import './ExpenseDate.css';
 
 export const ExpenseDate = ({ date }) => {
   const day = date.toLocaleString('en-US', { day: '2-digit' });

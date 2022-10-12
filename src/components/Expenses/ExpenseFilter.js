@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import './ExpenseFilter.css';
 
 export const ExpensesFilter = ({ year, onSelect }) => {
 

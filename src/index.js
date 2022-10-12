@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
-import { Expenses } from './components/Expenses';
-import { NewExpense } from './components/NewExpense';
+import { Expenses } from './components/Expenses/Expenses';
+import { NewExpense } from './components/NewExpense/NewExpense';
 import { useState } from 'react';
 
 const DUMMY_EXPENSES = [

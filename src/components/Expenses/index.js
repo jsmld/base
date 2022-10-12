@@ -6,15 +6,17 @@ import { ExpensesFilter } from './ExpenseFilter'
 
 export const Expenses = ({ expenses }) => {
 
-  const [year, setYear] = useState('')
+  const [year, setYear] = useState('2020')
   const handleFilter = (selectedYear) => {
     setYear(selectedYear);
   }
+  const filteredExpenses = expenses.filter(expense => expense.date.getFullYear().toString() === year)
+
   return (
     <Card className='expenses'>
       <ExpensesFilter year={year} onSelect={handleFilter} />
-      {expenses.map(({ title, amount, date }) => (
-        <ExpenseItem title={title} amount={amount} date={date} />
+      {filteredExpenses.map(({ title, amount, date, id }) => (
+        <ExpenseItem key={id} title={title} amount={amount} date={date} />
       ))}
     </Card>
   )

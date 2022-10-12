@@ -12,7 +12,7 @@ export const NewExpense = ({ onAddExpense }) => {
 
   return (
     <div className='new-expense'>
-      <ExpenseForm onSaveExpenseData={saveExpenseData}/>
+      <ExpenseForm onSaveExpenseData={saveExpenseData} />
     </div>
   )
 }

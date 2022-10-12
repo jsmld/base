@@ -2,10 +2,10 @@ import { Card } from '../../UI/Card';
 import { ExpenseDate } from '../ExpenseDate';
 import './style.css';
 
-export const ExpenseItem = ({title, amount, date}) => {
+export const ExpenseItem = ({ title, amount, date }) => {
   return (
     <Card className='expense-item'>
-      <ExpenseDate date={date}/>
+      <ExpenseDate date={date} />
       <div className='expense-item__description'>
         <h2>{title}</h2>
         <div className='expense-item__price'>$ {amount}</div>
